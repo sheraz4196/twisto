@@ -11,7 +11,7 @@ export default function Subscribe() {
       </p>
       <div className="flex gap-2 items-center">
         <Input placeholder="Email" type="email" />
-        <Button>Subscribe</Button>
+        <Button className="bg-accent-700 hover:bg-green-500">Subscribe</Button>
       </div>
     </form>
   );
