@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# twisto
+
+#New Staff
+
+## Whenever you clone this, inform sheraz.dev121@gmail.com
+
+## Please create a new branch for your work, never push in the main branch
+
+## Never Mention your name in branches
+
+## Use convectional names for branches, e.g if you are adding ui or functionality make branchName maybe feat-homepage-ui-and-functionality, if you are fixing issues, can say fix-homepage-ui-and-functionality
+
+## Never Commit using VS Code git lens, always push from terminal, never publish a branch
+
+## Raise PR's on github repository when you are done with a bunch of tasks
+
+## Will bes using tailwind css for the project
+
+## If you have further questions, please contact sheraz.dev121@gmail.com
+
+# Thanks Guys
