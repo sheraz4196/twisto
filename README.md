@@ -55,4 +55,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## If you have further questions, please contact sheraz.dev121@gmail.com
 
+## Ask permission when you are modifying any other developer
+
 # Thanks Guys
