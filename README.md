@@ -37,6 +37,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # twisto
 
+##Styling and functionality rules
+
+## Follow mobile first startegy
+
+## Only sheraz.de121@gmail.com is allowed to make changes in tailwindconfig file
+
+#Project Structure
+
+## components will contain folders ui and builded
+
+## ui will contain all components from shadcn and builded will contain all components builded by us but can be used in any project
+
+## \_components will contain components related to parent folder
+
 #New Staff
 
 ## Whenever you clone this, inform sheraz.dev121@gmail.com
