@@ -2,7 +2,7 @@ export default function NotFound() {
   return <div className="grid place-items-center h-auto p-5">
     <div className="grid place-items-center gap-10 sm:gap-8 md:gap-10 lg:gap-10 xl:gap-10 2xl:gap-10 text-center">
       <div className="sm:h-28 sm:w-60 md:h-32 md:w-72">
-        <img src="Error Alien Spaceship.jpg" alt="Error 404" />
+        <img src="Error Alien Spaceship.jpg" alt="Error 404 Alien" />
         </div>
         <div className="grid place-items-center text-center">
           <div className="grid place-items-center gap-5">
