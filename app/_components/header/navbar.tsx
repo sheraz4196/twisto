@@ -1,16 +1,20 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const pathname = usePathname();
   const Tabs = [
     {
-      name: "Home",
-      link: "/",
+      name: 'Home',
+      link: '/',
     },
     {
-      name: "About",
-      link: "/about",
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Generate Cv',
+      link: '/generate-cv',
     },
   ];
   return (
@@ -20,10 +24,10 @@ export default function Navbar() {
           <li key={index}>
             <Link
               href={Tab.link}
-              className={`text-base text-zinc-900  px-4 py-2 rounded-md border ${
+              className={`rounded-md border  px-4 py-2 text-base text-zinc-900 ${
                 pathname === Tab.link
-                  ? "bg-primary-400 font-bold border-zinc-900"
-                  : "bg-primary-200 font-semibold border-zinc-500"
+                  ? 'border-zinc-900 bg-primary-400 font-bold'
+                  : 'border-zinc-500 bg-primary-200 font-semibold'
               }`}
             >
               {Tab.name}
