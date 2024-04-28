@@ -1,3 +1,3 @@
 export default function Home() {
-  return <></>;
+  return <div className="bg-black">{/* Hero section goes here */}</div>;
 }
