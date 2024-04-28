@@ -10,6 +10,7 @@ export default function Footer() {
         <p className="col-start-1 text-zinc-600 text-xs lg:text-base">
           &copy; 2024, all rights reserved.
         </p>
+        
         <ContactUs />
       </div>
       <Subscribe />
