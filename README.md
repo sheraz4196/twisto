@@ -43,7 +43,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Only sheraz.de121@gmail.com is allowed to make changes in tailwindconfig file
 
-#Project Structure
+# Project Structure
 
 ## components will contain folders ui and builded
 
@@ -51,7 +51,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## \_components will contain components related to parent folder
 
-#New Staff
+# New Staff
 
 ## Whenever you clone this, inform sheraz.dev121@gmail.com
 
@@ -71,4 +71,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Ask permission when you are modifying any other developer
 
-# Thanks Guys
+#### Thanks Guys
