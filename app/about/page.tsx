@@ -1,3 +1,3 @@
 export default function About() {
-  return <div>{/* About Section code goes here */}</div>;
+  return <div>{/* Who we are Section code goes here */}</div>;
 }
