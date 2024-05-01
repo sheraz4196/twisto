@@ -1,7 +1,7 @@
 import Image from 'next/image';
 export default function About() {
   return (
-    <div className="flex min-h-screen justify-center bg-cyan-800 p-5  md:p-6 lg:p-10">
+    <div className="flex min-h-screen justify-center bg-cyan-800 p-5  md:p-6 lg:p-8">
       <div className="flex flex-col gap-6 text-white lg:gap-12">
         <div className="ml-2 text-xl font-medium text-yellow-400/90 lg:text-2xl">
           <h2>
@@ -28,7 +28,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex max-w-lg items-center gap-4 sm:flex-col-reverse lg:max-w-2xl lg:flex-row lg:gap-8">
+        <div className="flex max-w-2xl items-center gap-4 sm:flex-col-reverse lg:flex-row lg:gap-8">
           <div className="sm:px-40 lg:px-0">
             <Image
               src={'/hospital.png'}
