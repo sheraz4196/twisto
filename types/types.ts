@@ -9,3 +9,13 @@ export type Subscriber = {
   email: string;
   storeId: number;
 };
+
+
+
+
+export type TestimonialsCarouselProps = {
+  imgUrl: string;
+  name: string;
+  review: string;
+  date: string;
+};

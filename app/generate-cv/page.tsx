@@ -16,10 +16,12 @@ export default function CVGenerator() {
           guide will help you showcase your strengths and land your dream job.
         </p>
         <div className="flex items-center justify-center gap-4 font-semibold">
-          <Button className="flex items-center gap-4">
-            <p>Let&apos;s Craft Your CV</p>
-            <ArrowRight className="h-4 w-4 text-current" />
-          </Button>
+          <Link href={'/generate-cv/create'}>
+            <Button className="flex items-center gap-4">
+              <p>Let&apos;s Craft Your CV</p>
+              <ArrowRight className="h-4 w-4 text-current" />
+            </Button>
+          </Link>
           <Link href={'/'}>
             <Button variant={'destructive'}>Back To Home</Button>
           </Link>
