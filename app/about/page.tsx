@@ -14,8 +14,9 @@ export default function About() {
               We Help To Get You Well.
             </h1>
             <p className="mt-6 text-lg font-medium lg:mt-12 lg:text-xl">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s,
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quasi numquam minima
+              beatae voluptatum sapiente! Velit, repellendus. Deleniti, ipsa qui vel reprehenderit
+              fugiat numquam quis iste earum iusto ea at.
             </p>
           </div>
           <div className="sm:px-40 lg:px-0">
@@ -40,10 +41,9 @@ export default function About() {
           </div>
           <div>
             <p className="text-xs font-light lg:text-sm">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis enim placeat ad ex
+              quae amet, magni accusamus magnam sapiente ratione provident, nostrum deleniti, earum
+              fugit id! Dolorem voluptates molestias magni.
             </p>
           </div>
         </div>
