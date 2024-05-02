@@ -4,3 +4,8 @@ export type MailOptions = {
   text: string;
   html?: string;
 };
+export type Subscriber = {
+  id: number;
+  email: string;
+  storeId: number;
+};
