@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { sendSubscriberData } from '@/lib/send-email';
-import Link from 'next/link';
 export default function HomePageHero() {
   const send = async () => {
     'use server';
