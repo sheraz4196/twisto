@@ -10,8 +10,33 @@ export type Subscriber = {
   storeId: number;
 };
 
-
-
+export type CVFormData = {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+  address: string;
+  city: string;
+  postalCode: string;
+  goals: string;
+  degree: string;
+  graduationDate: string;
+  institutionName: string;
+  majorFieldOfStudy: string;
+  jobTitle: string;
+  companyName: string;
+  dateOfEmployment: string;
+  responsibilitiesAndAchievements: string;
+  companyLocation: string;
+  technicalSkills: string;
+  softSkills: string;
+  certification: string;
+  issuingOrganization: string;
+  certificationEarnedDate: string;
+  languages: string;
+  proficiencyLevel: string;
+  hobbies: string;
+};
 
 export type TestimonialsCarouselProps = {
   imgUrl: string;

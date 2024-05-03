@@ -211,7 +211,7 @@ export default function CreateCVForm() {
           />
           <FormField
             control={form.control}
-            name="companyName"
+            name="companyLocation"
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
@@ -237,11 +237,11 @@ export default function CreateCVForm() {
           />
           <FormField
             control={form.control}
-            name="technicalSkills"
+            name="softSkills"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Technical Skills" />
+                  <Input {...field} placeholder="Soft Skills" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -250,7 +250,7 @@ export default function CreateCVForm() {
           <h3 className="col-span-2 text-base font-bold lg:text-lg">Certifications & Licenses:</h3>
           <FormField
             control={form.control}
-            name="Certification"
+            name="certification"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
