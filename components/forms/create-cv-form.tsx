@@ -4,8 +4,14 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '../ui/form'
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { useState } from 'react';
+import useCVFormStore from '@/stores/cv-form-data-store';
 export default function CreateCVForm() {
   const form = useForm();
+  const { cvFormData, setCvFormData } = useCVFormStore();
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setCvFormData({ ...cvFormData, [name]: value });
+  }
   return (
     <Form {...form}>
       <form className="flex flex-col gap-2 border-r bg-gray-50 p-2 md:p-4 lg:gap-4 lg:p-6">
@@ -40,8 +46,13 @@ export default function CreateCVForm() {
             name="phoneNumber"
             render={({ field }) => (
               <FormItem>
-                <FormControl {...field}>
-                  <Input {...field} placeholder="Phone Number" type="number" />
+                <FormControl>
+                  <Input
+                    name="phoneNumber"
+                    onChange={handleChange}
+                    placeholder="Phone Number"
+                    type="number"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
