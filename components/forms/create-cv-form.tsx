@@ -23,7 +23,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="First Name" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    name="firstName"
+                    placeholder="First Name"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -35,7 +40,29 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Last Name" />
+                  <Input
+                    {...field}
+                    name="lastName"
+                    onChange={handleChange}
+                    placeholder="Last Name"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="bio"
+            render={({ field }) => (
+              <FormItem className="col-span-2">
+                <FormControl>
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    name="bio"
+                    placeholder="Bio, Software Engineer E.t.c"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -48,6 +75,7 @@ export default function CreateCVForm() {
               <FormItem>
                 <FormControl>
                   <Input
+                    {...field}
                     name="phoneNumber"
                     onChange={handleChange}
                     placeholder="Phone Number"
@@ -64,7 +92,13 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Email Address" type="email" />
+                  <Input
+                    {...field}
+                    name="email"
+                    placeholder="Email Address"
+                    onChange={handleChange}
+                    type="email"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -76,7 +110,7 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
-                  <Input {...field} placeholder="Address" />
+                  <Input {...field} name="address" onChange={handleChange} placeholder="Address" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -88,7 +122,7 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="City" {...field} />
+                  <Input {...field} placeholder="City" name="city" onChange={handleChange} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -100,7 +134,13 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Postal Code" type="number" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    name="postalCode"
+                    placeholder="Postal Code"
+                    type="number"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -115,7 +155,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
-                  <Textarea {...field} placeholder="Brief summary of career goals or objectives" />
+                  <Textarea
+                    {...field}
+                    onChange={handleChange}
+                    name="goals"
+                    placeholder="Brief summary of career goals or objectives"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -128,7 +173,7 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Degree" />
+                  <Input {...field} onChange={handleChange} name="degree" placeholder="Degree" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -140,7 +185,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Graduation Date" />
+                  <Input
+                    {...field}
+                    placeholder="Graduation Date"
+                    name="graduationDate"
+                    onChange={handleChange}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -152,7 +202,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Institution Name" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Institution Name"
+                    name="institutionName"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -164,7 +219,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Major Field Of Study" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Major Field Of Study"
+                    name="majorFieldOfStudy"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -177,7 +237,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Job Title" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Job Title"
+                    name="jobTitle"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -189,7 +254,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Company Name" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Company Name"
+                    name="companyName"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -198,11 +268,37 @@ export default function CreateCVForm() {
 
           <FormField
             control={form.control}
-            name="dateOfEmployment"
+            name="yearOfEmployment"
             render={({ field }) => (
-              <FormItem className="col-span-2">
+              <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Employment Date" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Employment Year"
+                    name="yearOfEmployment"
+                    type="number"
+                    min={4}
+                    max={4}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="yearOfResign"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Job Ended(Year)"
+                    name="yearOfResign"
+                    type="number"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -214,7 +310,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
-                  <Textarea {...field} placeholder="Responsibilities & Achievements" />
+                  <Textarea
+                    {...field}
+                    onChange={handleChange}
+                    name="responsibilitiesAndAchievements"
+                    placeholder="Responsibilities & Achievements"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -226,7 +327,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
-                  <Input {...field} placeholder="Company Location" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Company Location"
+                    name="companyLocation"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -240,7 +346,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Technical Skills" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Technical Skills"
+                    name="technicalSkills"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -252,7 +363,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Soft Skills" />
+                  <Input
+                    {...field}
+                    name="softSkills"
+                    onChange={handleChange}
+                    placeholder="Soft Skills"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -265,7 +381,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Certifications or Licenses" />
+                  <Input
+                    {...field}
+                    name="certification"
+                    onChange={handleChange}
+                    placeholder="Certifications or Licenses"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -277,7 +398,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Issuing Organization" />
+                  <Input
+                    {...field}
+                    onChange={handleChange}
+                    placeholder="Issuing Organization"
+                    name="issuingOrganization"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -289,7 +415,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
-                  <Input {...field} placeholder="Date Earned" />
+                  <Input
+                    {...field}
+                    name="certificationEarnedDate"
+                    onChange={handleChange}
+                    placeholder="Date Earned"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -302,7 +433,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2 lg:col-span-1">
                 <FormControl>
-                  <Input {...field} placeholder="Languages" />
+                  <Input
+                    {...field}
+                    name="languages"
+                    onChange={handleChange}
+                    placeholder="Languages"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -313,8 +449,14 @@ export default function CreateCVForm() {
             name="proficiencyLevel"
             render={({ field }) => (
               <FormItem className="col-span-2 lg:col-span-1">
+                {/* TODO: Add a radio group here instead */}
                 <FormControl>
-                  <Input {...field} placeholder="Proficiency Level" />
+                  <Input
+                    {...field}
+                    name="proficiencyLevel"
+                    onChange={handleChange}
+                    placeholder="Proficiency Level"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -327,19 +469,12 @@ export default function CreateCVForm() {
             render={({ field }) => (
               <FormItem className="col-span-2">
                 <FormControl>
-                  <Textarea {...field} placeholder="Interests / Hobbies" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="hobbies"
-            render={({ field }) => (
-              <FormItem className="col-span-2">
-                <FormControl>
-                  <Textarea {...field} placeholder="Interests / Hobbies" />
+                  <Textarea
+                    {...field}
+                    name="hobbies"
+                    onChange={handleChange}
+                    placeholder="Interests / Hobbies"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

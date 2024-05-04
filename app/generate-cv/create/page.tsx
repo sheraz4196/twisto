@@ -5,9 +5,7 @@ export default function CreateCV() {
   return (
     <div className="grid grid-cols-3">
       <CreateCVForm />
-      <div className="flex  justify-center">
-        <ClassicOne />
-      </div>
+      <ClassicOne />
     </div>
   );
 }

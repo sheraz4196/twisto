@@ -13,6 +13,7 @@ export type Subscriber = {
 export type CVFormData = {
   firstName: string;
   lastName: string;
+  bio: string;
   phoneNumber: string;
   email: string;
   address: string;
@@ -25,7 +26,6 @@ export type CVFormData = {
   majorFieldOfStudy: string;
   jobTitle: string;
   companyName: string;
-  dateOfEmployment: string;
   responsibilitiesAndAchievements: string;
   companyLocation: string;
   technicalSkills: string;
@@ -36,6 +36,8 @@ export type CVFormData = {
   languages: string;
   proficiencyLevel: string;
   hobbies: string;
+  yearOfResign: string;
+  yearOfEmployment: string;
 };
 
 export type TestimonialsCarouselProps = {

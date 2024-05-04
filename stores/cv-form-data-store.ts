@@ -8,6 +8,7 @@ const useCVFormStore = create<{
   cvFormData: {
     firstName: '',
     lastName: '',
+    bio: '',
     phoneNumber: '',
     email: '',
     address: '',
@@ -20,7 +21,8 @@ const useCVFormStore = create<{
     majorFieldOfStudy: '',
     jobTitle: '',
     companyName: '',
-    dateOfEmployment: '',
+    yearOfEmployment: '',
+    yearOfResign: '',
     responsibilitiesAndAchievements: '',
     companyLocation: '',
     technicalSkills: '',
