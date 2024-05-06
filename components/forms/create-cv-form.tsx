@@ -2,9 +2,42 @@
 import { useForm } from 'react-hook-form';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '../ui/form';
 import { Input } from '../ui/input';
+import { zodResolver } from '@hookform/resolvers/zod';
+
 import { Textarea } from '../ui/textarea';
-import { useState } from 'react';
 import useCVFormStore from '@/stores/cv-form-data-store';
+import { Button } from '../ui/button';
+import { Download } from 'lucide-react';
+import { z } from 'zod';
+const formDataSchema = z.object({
+  firstName: z.string().min(2, { message: 'First Name Must be at least two characters long' }),
+  lastName: z.string().min(2, { message: 'Last Name Must be at least two characters long' }),
+  bio: z.string({ message: 'Please Enter a valid bio' }),
+  phoneNumber: z.number().min(6, { message: 'Please Enter a valid Phone Number' }),
+  email: z.string().email({ message: 'Please enter a valid email address' }),
+  city: z.string({ message: 'Enter a City Name Please!' }),
+  postalCode: z.number().min(7, { message: 'Please Enter Valid postal code' }),
+  goals: z.string().min(19, { message: 'This field should at least 10 characters long.' }),
+  degree: z.string().min(4, { message: 'Please Enter a valid degree name' }),
+  graduationDate: z.string().min(11, { message: 'Please write date like, 04 May,2024' }),
+  institutionName: z.string().min(4, { message: 'Enter a valid institute name' }),
+  jobTitle: z.string().min(4, { message: 'Please Enter a valid job title.' }),
+  companyName: z.string().min(4, { message: 'Please enter a valid company name' }),
+  yearOfEmployment: z.number().min(4).max(4, { message: 'Please Enter a valid year' }),
+  yearOfResign: z.number().min(4).max(4, { message: 'Please Enter a valid year' }),
+  responsibilitiesAndAchievements: z
+    .string()
+    .min(10, { message: 'This field must at least 10 characters long' }),
+  companyLocation: z.string().min(2, { message: 'Please enter a valid location' }),
+  technicalSkills: z.string(),
+  softSkills: z.string(),
+  certification: z.string(),
+  issuingOrganization: z.string(),
+  certificationEarnedDate: z.string().min(11, { message: 'Please write date like, 04 May,2024' }),
+  languages: z.string(),
+  proficiencyLevel: z.string(),
+  hobbies: z.string(),
+});
 export default function CreateCVForm() {
   const form = useForm();
   const { cvFormData, setCvFormData } = useCVFormStore();
@@ -12,9 +45,13 @@ export default function CreateCVForm() {
     const { name, value } = e.target;
     setCvFormData({ ...cvFormData, [name]: value });
   }
+  function onSubmit() {}
   return (
     <Form {...form}>
-      <form className="flex flex-col gap-2 border-r bg-gray-50 p-2 md:p-4 lg:gap-4 lg:p-6">
+      <form
+        className="flex flex-col gap-2 border-r bg-gray-50 p-2 md:p-4 lg:gap-4 lg:p-6"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <div className="grid grid-cols-2 gap-2 lg:gap-4">
           <h3 className="col-span-2 text-base font-bold lg:text-lg">Personal Information:</h3>
           <FormField
@@ -481,6 +518,10 @@ export default function CreateCVForm() {
             )}
           />
         </div>
+        <Button className="flex items-center gap-4" type="submit">
+          <span>Download</span>
+          <Download size={16} />
+        </Button>
       </form>
     </Form>
   );
