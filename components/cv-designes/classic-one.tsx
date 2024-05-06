@@ -6,7 +6,7 @@ export default function ClassicOne() {
   const { cvFormData } = useCVFormStore();
   console.log(cvFormData);
   return (
-    <section className="col-span-2 flex">
+    <section className="col-span-2 flex" id="classic-one">
       <div className="flex flex-col justify-between gap-8  bg-slate-800 px-8 py-4 text-zinc-100">
         <div className="flex items-center justify-center">
           <Image
