@@ -1,13 +1,17 @@
 'use client';
 import useCVFormStore from '@/stores/cv-form-data-store';
 import Image from 'next/image';
+import { forwardRef } from 'react';
 
-export default function ClassicOne() {
+const ClassicOne = forwardRef<HTMLDivElement>((props, ref) => {
   const { cvFormData } = useCVFormStore();
   console.log(cvFormData);
   return (
-    <section className="col-span-2 flex" id="classic-one">
-      <div className="flex flex-col justify-between gap-8  bg-slate-800 px-8 py-4 text-zinc-100">
+    <section className="col-span-2 flex" id="classic-one" ref={ref}>
+      <div
+        className="flex flex-col justify-between gap-8  bg-slate-800 px-8 py-4 text-zinc-100"
+        id="print"
+      >
         <div className="flex items-center justify-center">
           <Image
             className="h-auto w-auto"
@@ -141,4 +145,6 @@ export default function ClassicOne() {
       </div>
     </section>
   );
-}
+});
+ClassicOne.displayName = 'ClassicOne';
+export default ClassicOne;

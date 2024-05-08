@@ -2,13 +2,15 @@
 import { useForm } from 'react-hook-form';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '../ui/form';
 import { Input } from '../ui/input';
+import { useReactToPrint } from 'react-to-print';
 import { zodResolver } from '@hookform/resolvers/zod';
-
 import { Textarea } from '../ui/textarea';
 import useCVFormStore from '@/stores/cv-form-data-store';
 import { Button } from '../ui/button';
 import { Download } from 'lucide-react';
 import { z } from 'zod';
+import { useRef } from 'react';
+import ClassicOne from '../cv-designes/classic-one';
 const formDataSchema = z.object({
   firstName: z.string().min(2, { message: 'First Name Must be at least two characters long' }),
   lastName: z.string().min(2, { message: 'Last Name Must be at least two characters long' }),
@@ -39,19 +41,59 @@ const formDataSchema = z.object({
   hobbies: z.string(),
 });
 export default function CreateCVForm() {
+  const classicOneRef = useRef<HTMLDivElement>(null);
+  let Html2Pdf: any;
+  if (typeof window !== 'undefined') {
+    Html2Pdf = require('js-html2pdf');
+  }
   const form = useForm();
   const { cvFormData, setCvFormData } = useCVFormStore();
   function handleChange(e) {
     const { name, value } = e.target;
     setCvFormData({ ...cvFormData, [name]: value });
   }
-  function onSubmit() {}
+  const handlePrint = useReactToPrint({
+    onPrintError: (error) => console.log(error),
+    content: () => classicOneRef.current,
+    removeAfterPrint: true,
+    print: async (printIframe) => {
+      const document = printIframe.contentDocument;
+      if (document) {
+        const html = document.getElementById('classic-one');
+        if (html) {
+          html.style.fontFamily = 'Arial, sans-serif';
+          html.style.margin = '0px !important';
+          html.style.width = '100%';
+          html.style.height = '100%';
+          const textElements = html.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6');
+          textElements.forEach((element) => {
+            (element as HTMLElement).style.fontWeight = 'normal';
+            (element as HTMLElement).style.fontStyle = 'normal';
+          });
+        }
+        const exporter = new Html2Pdf(html, {
+          filename: `New CV`,
+          image: { type: 'jpeg', quality: 0.1 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', compression: true },
+        });
+        await exporter.getPdf(true);
+      }
+    },
+  });
+  function onSubmit() {
+    console.log(classicOneRef.current);
+    handlePrint();
+  }
   return (
     <Form {...form}>
       <form
         className="flex flex-col gap-2 border-r bg-gray-50 p-2 md:p-4 lg:gap-4 lg:p-6"
         onSubmit={form.handleSubmit(onSubmit)}
       >
+        <div className="hidden">
+          <ClassicOne ref={classicOneRef} />
+        </div>
         <div className="grid grid-cols-2 gap-2 lg:gap-4">
           <h3 className="col-span-2 text-base font-bold lg:text-lg">Personal Information:</h3>
           <FormField
