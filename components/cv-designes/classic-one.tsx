@@ -1,5 +1,5 @@
 'use client';
-import useCVFormStore from '@/stores/cv-form-data-store';
+import useCVFormStore from '@/stores/cv/cv-form-data-store';
 import Image from 'next/image';
 import { forwardRef } from 'react';
 

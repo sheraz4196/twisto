@@ -5,7 +5,7 @@ import { Input } from '../ui/input';
 import { useReactToPrint } from 'react-to-print';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Textarea } from '../ui/textarea';
-import useCVFormStore from '@/stores/cv-form-data-store';
+import useCVFormStore from '@/stores/cv/cv-form-data-store';
 import { Button } from '../ui/button';
 import { Download } from 'lucide-react';
 import { z } from 'zod';

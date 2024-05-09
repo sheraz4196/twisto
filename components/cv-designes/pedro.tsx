@@ -1,10 +1,7 @@
 'use client';
-import useCVFormStore from '@/stores/cv-form-data-store';
 import { forwardRef } from 'react';
 
 const Pedro = forwardRef<HTMLDivElement>((props, ref) => {
-  const { cvFormData } = useCVFormStore();
-  console.log(cvFormData);
   return (
     <section className="col-span-2 flex justify-center" id="classic-one" ref={ref}>
       <div className="flex flex-row justify-center  gap-6 border-t-4 border-solid  border-black p-8 text-start lg:gap-10">
