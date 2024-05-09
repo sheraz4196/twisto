@@ -1,3 +1,4 @@
+import CountrySelect from '../general/country-selector';
 import TemplateSelect from './template-select';
 import ThemeSelect from './theme-select';
 
@@ -10,6 +11,7 @@ export default function CVGeneratorHeader() {
       <div className="flex items-center gap-4 lg:gap-8">
         <TemplateSelect />
         <ThemeSelect />
+        <CountrySelect />
       </div>
     </header>
   );
