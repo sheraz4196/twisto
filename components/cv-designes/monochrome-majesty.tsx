@@ -5,7 +5,7 @@ const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section className="col-span-2 flex flex-col" id="classic-one" ref={ref}>
       <div className=" flex flex-col p-6 lg:p-8">
-        <div className="flex flex-row items-center justify-between border-b-2 border-solid border-black pb-8">
+        <div className="flex flex-row items-start justify-between border-b-2 border-solid border-black pb-8">
           <div className="flex flex-row items-center gap-6">
             <div className="rounded-full">
               <img src="/client.jpg" className="h-auto w-auto" alt="" />
