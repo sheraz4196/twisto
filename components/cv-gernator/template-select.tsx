@@ -6,8 +6,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import useCVTemplateStore from '@/stores/cv-template-store';
 import { CVTemplates } from '@/constants';
+import useCVTemplateStore from '@/stores/cv/cv-template-store';
 export default function TemplateSelect() {
   const { setCVTemplate } = useCVTemplateStore();
   return (

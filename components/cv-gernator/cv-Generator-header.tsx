@@ -1,4 +1,5 @@
 import TemplateSelect from './template-select';
+import ThemeSelect from './theme-select';
 
 export default function CVGeneratorHeader() {
   return (
@@ -8,6 +9,7 @@ export default function CVGeneratorHeader() {
       </h3>
       <div className="flex items-center gap-4 lg:gap-8">
         <TemplateSelect />
+        <ThemeSelect />
       </div>
     </header>
   );
