@@ -7,7 +7,7 @@ const Pedro = forwardRef<HTMLDivElement>((props, ref) => {
   console.log(cvFormData);
   return (
     <section className="col-span-2 flex justify-center" id="classic-one" ref={ref}>
-      <div className="flex flex-row justify-center gap-6 border-t-4 border-solid  border-black p-8 text-start lg:gap-10">
+      <div className="flex flex-row justify-center  gap-6 border-t-4 border-solid  border-black p-8 text-start lg:gap-10">
         <div className="flex flex-col gap-6 lg:gap-8">
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-bold lg:text-4xl">Your Name</h1>
