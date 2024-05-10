@@ -1,6 +1,6 @@
 'use client';
 import { forwardRef } from 'react';
-
+import Image from 'next/image';
 const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section className="col-span-2 flex flex-col" id="classic-one" ref={ref}>
@@ -8,7 +8,7 @@ const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
         <div className="flex flex-row items-start justify-between border-b-2 border-solid border-black pb-8">
           <div className="flex flex-row items-center gap-6">
             <div className="rounded-full">
-              <img src="/client.jpg" className="h-auto w-auto" alt="" />
+              <Image src={'/client.jpg'} width={150} height={150} alt={`client-image`} />
             </div>
             <div>
               <h1 className="text-xl font-semibold lg:text-3xl">John Doe</h1>

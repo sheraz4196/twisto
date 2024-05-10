@@ -1,6 +1,6 @@
 'use client';
 import { forwardRef } from 'react';
-
+import Image from 'next/image';
 const Pedro = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <section className="col-span-2 flex justify-center" id="classic-one" ref={ref}>
@@ -71,7 +71,7 @@ const Pedro = forwardRef<HTMLDivElement>((props, ref) => {
         </div>
         <div className="flex flex-col gap-8 lg:gap-10">
           <div>
-            <img src="/client.jpg" alt="" className="" />
+            <Image src={'/client.jpg'} width={150} height={150} alt={`client-image`} />
           </div>
           <div className="flex flex-col gap-6 text-zinc-700 lg:gap-8">
             <div>
