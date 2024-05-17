@@ -1,4 +1,4 @@
-export const CVTemplates: string[] = ['Pedro', 'ClassicI'];
+export const CVTemplates: string[] = ['Pedro', 'ClassicI', 'Monochrome Majesty'];
 export const CVThemes: string[] = [
   'Azure Aura',
   'Crimson Crest',
