@@ -9,6 +9,11 @@ export type Subscriber = {
   email: string;
   storeId: number;
 };
+export type Theme = {
+  theme: string;
+  background: string;
+  border: string;
+};
 
 export type CVFormData = {
   firstName: string;

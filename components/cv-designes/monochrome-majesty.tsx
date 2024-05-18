@@ -3,7 +3,11 @@ import { forwardRef } from 'react';
 import Image from 'next/image';
 const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <section className="col-span-2 flex flex-col" id="classic-one" ref={ref}>
+    <section
+      className="col-span-2 flex flex-col items-center justify-center"
+      id="classic-one"
+      ref={ref}
+    >
       <div className=" flex flex-col p-6 lg:p-8">
         <div className="flex flex-row items-start justify-between border-b-2 border-solid border-black pb-8">
           <div className="flex flex-row items-center gap-6">
