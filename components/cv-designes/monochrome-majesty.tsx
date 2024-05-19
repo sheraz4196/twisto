@@ -1,15 +1,29 @@
 'use client';
 import { forwardRef } from 'react';
 import Image from 'next/image';
+import useCVThemeStore from '@/stores/cv/cv-theme-store';
 const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
+  const { cvTheme } = useCVThemeStore();
+  const theme = `theme-${cvTheme}`;
+
   return (
     <section
-      className="col-span-2 flex flex-col items-center justify-center"
-      id="classic-one"
+      className={`${cvTheme === 'Azure-Aura' ? 'theme-Azure-Aura' : ''}
+       ${cvTheme === 'Crimson-Crest' ? 'theme-Crimson-Crest' : ''} 
+       ${cvTheme === 'Indigo-Influence' ? 'theme-Indigo-Influence' : ''}
+       ${cvTheme === 'Sapphire-Spectra' ? 'theme-Sapphire-Spectra' : ''}
+       ${cvTheme === 'Emerald-Eclipse' ? 'theme-Emerald-Eclipse' : ''}
+       ${cvTheme === 'Ruby-Radiance' ? 'theme-Ruby-Radiance' : ''}
+       ${cvTheme === 'Topaz-Terra' ? 'theme-Topaz-Terra' : ''}
+       ${cvTheme === 'Opal-Oasis' ? 'theme-Opal-Oasis' : ''}
+       ${cvTheme === 'Graphite-Glimmer' ? 'theme-Graphite-Glimmer' : ''}
+       ${cvTheme === 'Amber-Aether' ? 'theme-Amber-Aether' : ''}
+       col-span-2 flex flex-col items-center justify-center`}
+      id="monochrome-majesty"
       ref={ref}
     >
-      <div className=" flex flex-col p-6 lg:p-8">
-        <div className="flex flex-row items-start justify-between border-b-2 border-solid border-black pb-8">
+      <div className="bg-skin-fill text-skin-base flex flex-col p-6 lg:p-8">
+        <div className="border-skin-lines  flex flex-row items-start justify-between border-b-2 border-solid pb-8">
           <div className="flex flex-row items-center gap-6">
             <div className="rounded-full">
               <Image src={'/client.jpg'} width={150} height={150} alt={`client-image`} />
@@ -27,7 +41,7 @@ const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
         </div>
         <div className="col-span-3 flex flex-row">
           <div className="p-8"></div>
-          <div className="flex flex-col gap-10 border-l-2 border-r-2 border-solid border-black p-8 pb-12">
+          <div className="border-skin-lines flex flex-col gap-10 border-l-2 border-r-2 border-solid p-8 pb-12">
             <div>
               <p className="text-xl font-semibold lg:text-2xl">Education</p>
             </div>
@@ -152,7 +166,7 @@ const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
             </div>
           </div>
         </div>
-        <div className="relative -top-6 border-b-2 border-solid border-black"></div>
+        <div className="border-skin-lines relative -top-6 border-b-2 border-solid"></div>
       </div>
     </section>
   );

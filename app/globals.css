@@ -6,35 +6,83 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
-
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
-
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-
     --radius: 0.5rem;
+
+    /* Themes Default Settings */
+    --color-text: #000;
+    --color-background: #fff;
+    --color-border: #000;
   }
 
+  /* CV Themes */
+  .theme-Azure-Aura {
+    --color-text: #fff;
+    --color-background: #007fff;
+    --color-border: #005bb5;
+  }
+  .theme-Crimson-Crest {
+    --color-text: #ffd700;
+    --color-background: #dc143c;
+    --color-border: #8b0000;
+  }
+  .theme-Indigo-Influence {
+    --color-text: #c0c0c0;
+    --color-background: #4b0082;
+    --color-border: #2c003e;
+  }
+  .theme-Sapphire-Spectra {
+    --color-text: #c0c0c0;
+    --color-background: #4169e1;
+    --color-border: #ffd700;
+  }
+  .theme-Emerald-Eclipse {
+    --color-text: #004b23;
+    --color-background: #50c878;
+    --color-border: #c0c0c0;
+  }
+  .theme-Graphite-Glimmer {
+    --color-text: #fff;
+    --color-background: #36454f;
+    --color-border: #1c1c1c;
+  }
+  .theme-Ruby-Radiance {
+    --color-text: #fff;
+    --color-background: #e0115f;
+    --color-border: #8b0000;
+  }
+  .theme-Topaz-Terra {
+    --color-text: #654321;
+    --color-background: #ffd700;
+    --color-border: #a67b5b;
+  }
+  .theme-Amber-Aether {
+    --color-text: #ffffff;
+    --color-background: #ff7e00;
+    --color-border: #b5651d;
+  }
+  .theme-Opal-Oasis {
+    --color-text: #000080;
+    --color-background: #f0f8ff;
+    --color-border: #5f9ea0;
+  }
+  /* Dark System */
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
