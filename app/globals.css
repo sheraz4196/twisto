@@ -127,3 +127,7 @@ header,
 footer {
   /* display: none !important; */
 }
+.background-one {
+  background-image: url('../public/background_one.jpg');
+  background-size: cover;
+}

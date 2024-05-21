@@ -13,8 +13,8 @@ export default function Navbar() {
       link: '/about',
     },
     {
-      name: 'Generate CV',
-      link: '/generate-cv',
+      name: 'Toolkit',
+      link: '/toolkit',
     },
   ];
   return (
