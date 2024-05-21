@@ -18,14 +18,8 @@ export default async function CountrySelect() {
         {Countries.map((country, index) => (
           <SelectItem value={country.cca2} key={index} className=" border-b border-zinc-500 p-1">
             <div className="flex items-center gap-2">
-              <div className="h-48 w-48">
-                <Image
-                  src={country.flags.svg}
-                  alt={country.flags.alt}
-                  width={80}
-                  height={80}
-                  className="h-auto w-auto rounded-full"
-                />
+              <div className="h-48 w-48 overflow-hidden">
+                <Image src={country.flags.svg} alt={country.flags.alt} width={50} height={50} />
               </div>
               <p className="font-semibold text-zinc-700">{country.name.common}</p>
             </div>

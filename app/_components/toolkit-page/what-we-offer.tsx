@@ -18,19 +18,19 @@ export default function WhatWeOffer() {
           <Card
             title="Professional CV Generator"
             description={`Craft a compelling and visually appealing resume with our Professional CV Generator. Tailor your resume to highlight your unique skills, experience, and achievements, ensuring that you stand out to potential employers. Our easy-to-use interface allows you to choose from a variety of templates and customize them to suit your professional style. Whether you're just starting your career or looking to make a move, our CV generator helps you present your best self.`}
-            navigate="/intro"
+            navigate="/toolkit/intro"
             navigateText="Craft Your Perfect CV"
           />
           <Card
             title="Professional CV Generator"
             description={`Craft a compelling and visually appealing resume with our Professional CV Generator. Tailor your resume to highlight your unique skills, experience, and achievements, ensuring that you stand out to potential employers. Our easy-to-use interface allows you to choose from a variety of templates and customize them to suit your professional style. Whether you're just starting your career or looking to make a move, our CV generator helps you present your best self.`}
-            navigate="/intro"
+            navigate="/toolkit/intro"
             navigateText="Craft Your Perfect CV"
           />
           <Card
             title="Professional CV Generator"
             description={`Craft a compelling and visually appealing resume with our Professional CV Generator. Tailor your resume to highlight your unique skills, experience, and achievements, ensuring that you stand out to potential employers. Our easy-to-use interface allows you to choose from a variety of templates and customize them to suit your professional style. Whether you're just starting your career or looking to make a move, our CV generator helps you present your best self.`}
-            navigate="/intro"
+            navigate="/toolkit/intro"
             navigateText="Craft Your Perfect CV"
           />
         </div>

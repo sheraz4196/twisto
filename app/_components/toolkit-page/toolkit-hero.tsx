@@ -18,7 +18,7 @@ export default function ToolkitHero() {
           our toolkit and take the next step towards success!
         </p>
         <div className="flex items-center justify-center gap-4 font-semibold">
-          <Link href={'/intro'}>
+          <Link href={'/toolkit/intro'}>
             <Button className="flex items-center gap-4">
               <p>Get Started</p>
               <ArrowRight className="h-4 w-4 text-current" />
