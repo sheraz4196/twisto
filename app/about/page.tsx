@@ -3,7 +3,6 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div>
-      <CVGeneratorHeader />
       <div className="flex min-h-screen justify-center bg-cyan-800 p-5  md:p-6 lg:p-8">
         <div className="flex flex-col gap-6 text-white lg:gap-12">
           <div className="ml-2 text-xl font-medium text-yellow-400/90 lg:text-2xl">

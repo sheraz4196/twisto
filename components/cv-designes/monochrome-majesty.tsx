@@ -4,8 +4,6 @@ import Image from 'next/image';
 import useCVThemeStore from '@/stores/cv/cv-theme-store';
 const MonochromeMajesty = forwardRef<HTMLDivElement>((props, ref) => {
   const { cvTheme } = useCVThemeStore();
-  const theme = `theme-${cvTheme}`;
-
   return (
     <section
       className={`${cvTheme === 'Azure-Aura' ? 'theme-Azure-Aura' : ''}

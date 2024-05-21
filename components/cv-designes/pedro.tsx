@@ -2,13 +2,8 @@
 import { forwardRef } from 'react';
 import Image from 'next/image';
 import useCVThemeStore from '@/stores/cv/cv-theme-store';
-import { Themes } from '@/constants';
 const Pedro = forwardRef<HTMLDivElement>((props, ref) => {
   const { cvTheme } = useCVThemeStore();
-
-  const border = cvTheme;
-  const text = '';
-  const background = '';
   return (
     <section className="col-span-2 flex items-center justify-center" id="classic-one" ref={ref}>
       <div className="flex flex-row justify-center  gap-6 border-t-4 border-solid  border-black p-8 text-start lg:gap-10">

@@ -2,10 +2,8 @@
 import useCVFormStore from '@/stores/cv/cv-form-data-store';
 import Image from 'next/image';
 import { forwardRef } from 'react';
-
 const ClassicOne = forwardRef<HTMLDivElement>((props, ref) => {
   const { cvFormData } = useCVFormStore();
-  console.log(cvFormData);
   return (
     <section className="col-span-2 flex" id="classic-one" ref={ref}>
       <div
