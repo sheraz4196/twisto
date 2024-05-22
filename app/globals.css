@@ -131,3 +131,16 @@ footer {
   background-image: url('../public/background_one.jpg');
   background-size: cover;
 }
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Track color */
+  border-left: 1px solid #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a3a3a3; /* Thumb color */
+}

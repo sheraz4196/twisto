@@ -32,8 +32,9 @@ export default function CountryDropDown({ countries }: Props) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="h-96 w-72 overflow-y-auto">
-        {countries.map((country) => (
+        {countries.map((country, index) => (
           <Fragment key={country.cca2}>
+            {index <= countries.length - 1 && index !== 0 && <DropdownMenuSeparator />}
             <DropdownMenuItem
               onSelect={() => setSelectedCountry(country)}
               className="flex items-center gap-4"
@@ -45,6 +46,7 @@ export default function CountryDropDown({ countries }: Props) {
                 height={20}
                 className="h-auto max-h-12 w-auto max-w-12"
               />
+
               <p>{country.name.common}</p>
             </DropdownMenuItem>
           </Fragment>
