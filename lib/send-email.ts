@@ -10,8 +10,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: true,
   auth: {
-    user: 'sheraz.dev121@gmail.com',
-    pass: 'fenr albf xutl gnho',
+    user: TWISTO_PUBLIC_APP_USERNAME,
+    pass: TWISTO_PUBLIC_APP_PASSWORD,
   },
 });
 
@@ -39,7 +39,7 @@ export async function sendSubscriberData({
   }
   const info = await transporter.sendMail({
     from: email,
-    to: 'malenabeige@fthcapital.com',
+    to: TWISTO_PUBLIC_EMAIL_RECEIVER,
     subject: subject,
     text: text,
     html: html ? html : '',

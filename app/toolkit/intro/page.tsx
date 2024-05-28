@@ -6,8 +6,9 @@ export default async function Intro() {
     subject: 'Test Mail',
     email: 'sheraz.dev121@gmail.com',
     text: 'Hello There',
-    html: `<h4 className='text-7xl text-red-400'>Hello</h4>`,
+    html: `<h4 style="font-size: 3.75rem; color: #f87171;">Hello</h4>`,
   });
+
   return (
     <section>
       <CountrySelect />
